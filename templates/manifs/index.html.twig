@@ -1,8 +1,33 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
 
-    <h2>ici c'est les manifeste (._.)</h2>
 
-    <p>comming song</p>
+            <div id="banniere_image"></div>
+    <center><h1>Liste de jeux vidéo Mario</h1></center>
+
+    <section id="bd">
+
+
+
+<?php
+DATABASE_URL="mysql://root:123456@mariadb:3306/test?serverVersion=8&charset=utf8mb4"
+$mabd->query('SET NAMES utf8;');
+$req = "SELECT * FROM manif INNER JOIN salle ON manif._salle_id = salle.salle_id";
+$resultat = $mabd->query($req);
+foreach ($resultat as $value) {
+    echo '<div id="album">' ;
+    {% for manif in manif %}
+    echo '<center><h3>{{ manif.titre }}</h3></center>';
+    echo '<center><img class="image" src="'.$value['manif_affiche'].'" alt="Photo" height="160" width="118" /></center>';
+    echo '<p class="page"> par' . $value['manif_auteur'] . '  </p>';
+    echo '<center><p>sorti le ' . $value['manif_date'] . ' au ' . $value['salle_nom'] . ' </p></center>';
+    echo '<p class="page">pour ' . $value['manif_prix'] . '  €</p>';
+    echo '<p class="page"> genre :' . $value['manif_genre'] . '  </p>';
+    echo '<p class="page"> durée :' . $value['manif_duree'] . '  </p>';
+    echo '<p height="16" width="11">Commentaire : ' . $value['manif_description'] . ' </p>';
+    echo '</div>';
+}
+
+?>{% endfor %}
+</section>
 {% endblock %}
