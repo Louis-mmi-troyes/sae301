@@ -24,15 +24,15 @@ class ManifCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->onlyOnindex(),
-            TextField::new('titre'),
-            ImageField::new('affiche')->setBasePath('uploads/')->setUploadDir('public/uploads/'),
-            TextField::new('genre'),
-            TextField::new('descript'),
-            TextField::new('casting'),
-            TextField::new('prix'),
-            TextField::new('date'),
-            TextField::new('horaire'),
-            AssociationField::new('ManifSalles', 'ManifSalles')
+            TextField::new('manifTitre'),
+            ImageField::new('manifAffiche')->setBasePath('uploads/')->setUploadDir('public/uploads/'),
+            TextField::new('manifGenre'),
+            TextField::new('manifDescription'),
+            TextField::new('manifAuteur'),
+            TextField::new('manifPrix'),
+            #DateField::new('manifDate'),
+            TextField::new('manifDuree'),
+
         ];
     }
     
