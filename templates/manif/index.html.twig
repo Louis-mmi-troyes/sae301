@@ -9,7 +9,34 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello {{ controller_name }}! </h1>
+    {# templates/article/recent_list.html.twig #}
+{# the contents of this variable are sent to the Web Debug Toolbar
+   instead of dumping them inside the page contents #}
+{% dump manif %}
+
+{% for manif in manif %}
+    {# the contents of this variable are dumped inside the page contents
+       and they are visible on the web page #}
+    {{ dump(manif) }}
+
+    <a href="/manif/{{ manif.slug }}">
+        {{ manif.title }}
+    </a>
+{% endfor %}
+            {% for manif in manif %}
+            <tr>
+                <td>{{ manif.genre }}</td>
+                <td>{{ manif.titre }}</td>
+                <td>{{ manif.descript }}</td>
+                <td>{{ manif.casting }}</td>
+                <td>{{ manif.prix }}</td>
+                <td>{{ manif.date }}</td>
+                <td>{{ manif.horaire }}</td>
+                <td><a href="../manifestation" id="reserver">Réserver</a></td>
+{% endfor %}
+
+
 
     This friendly message is coming from:
     <ul>
