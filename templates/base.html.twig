@@ -28,11 +28,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="manifs">Manifs</a>
                 </li>
+                {% if is_granted("ROLE_ADMIN") %}
                 <li class="nav-item">
                     <a class="nav-link" href="admin"></i>Administration</a>
+                {% endif %}
+                {% if app.user %}
+                {{app.user.username}}
+                {% else %}
+                {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="login">connexion</a>
+                    <a class="nav-link" href="login">compte</a>
                 </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="register">s'inscrire</a>
+                </li>
+                {% endif %}
             </ul>
             </div>
         </div>
