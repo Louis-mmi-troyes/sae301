@@ -1,33 +1,279 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 
+{# the CSS file lives at "public/css/style2.css" #}
+<link href="{{ asset('css/style2.css') }}" rel="stylesheet"/>
+{# the image lives at "public/images/product-2.png" #}
+{# the image lives at "public/images/1.jpg" #}
 
-            <div id="banniere_image"></div>
-    <center><h1>Liste de jeux vidéo Mario</h1></center>
+ 
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <h2 class="heading-section">Liste des manifeste</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="h5 mb-4 text-center">film</h3>
+                    <div class="table-wrap">
+                        <table class="table">
+                          <thead class="thead-primary">
+                            <tr>
 
-    <section id="bd">
+                                <th>&nbsp;</th>
+                                <th>Titre</th>
+                                <th>Description</th>
+                                <th>date</th>
+                                
+                              <th>prix</th>
+                              <th>Quantiter</th>
+                              <th>salle</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="alert" role="alert">
+
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/1.jpg') }}" alt="Photo" height="200px" width="100px" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Batman - Le Défi</span>
+                                    <span>Tim Burton</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>2022-12-06</span>
+                                    <span>2h06</span>
+                                </div>
+                              </td>
 
 
+                              <td>7.50€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="2" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>cienema3d</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            </tr>
+ <tr class="alert" role="alert">
 
-<?php
-DATABASE_URL="mysql://root:123456@mariadb:3306/test?serverVersion=8&charset=utf8mb4"
-$mabd->query('SET NAMES utf8;');
-$req = "SELECT * FROM manif INNER JOIN salle ON manif._salle_id = salle.salle_id";
-$resultat = $mabd->query($req);
-foreach ($resultat as $value) {
-    echo '<div id="album">' ;
-    {% for manif in manif %}
-    echo '<center><h3>{{ manif.titre }}</h3></center>';
-    echo '<center><img class="image" src="'.$value['manif_affiche'].'" alt="Photo" height="160" width="118" /></center>';
-    echo '<p class="page"> par' . $value['manif_auteur'] . '  </p>';
-    echo '<center><p>sorti le ' . $value['manif_date'] . ' au ' . $value['salle_nom'] . ' </p></center>';
-    echo '<p class="page">pour ' . $value['manif_prix'] . '  €</p>';
-    echo '<p class="page"> genre :' . $value['manif_genre'] . '  </p>';
-    echo '<p class="page"> durée :' . $value['manif_duree'] . '  </p>';
-    echo '<p height="16" width="11">Commentaire : ' . $value['manif_description'] . ' </p>';
-    echo '</div>';
-}
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/2.jpg') }}" alt="Photo" height="240" width="100" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Blade Runner</span>
+                                    <span>Ridley Scott</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>1982-03-12</span>
+                                    <span>1h54</span>
+                                </div>
+                              </td>
+                              <td>9€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>Frères de l'Ombre</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            </tr>
+<tr class="alert" role="alert">
 
-?>{% endfor %}
-</section>
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/3.jpg') }}" alt="Photo" height="260" width="100" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Harry Potter</span>
+                                    <span>Chris Columbs</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>2001-02-04</span>
+                                    <span>2h32</span>
+                                </div>
+                              </td>
+                              <td>8€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>Projector</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            </tr>
+                            <tr class="alert" role="alert">
+
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/4.jpg') }}" alt="Photo" height="200" width="100" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Ça</span>
+                                    <span>Andrés Muschietti</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>2017-06-07</span>
+                                    <span>2h15</span>
+                                </div>
+                              </td>
+                              <td>7.50€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>Au Septième</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            </tr>
+                            <tr class="alert" role="alert">
+
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/5.jpg') }}" alt="Photo" height="200" width="100" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Legend </span>
+                                    <span>Brian Helgeland</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>2015-01-15</span>
+                                    <span>2h11</span>
+                                </div>
+                              </td>
+                              <td>6€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>Le Coin d'Hollywood</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            </tr>
+                            <tr class="alert" role="alert">
+
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/6.jpg') }}" alt="Photo" height="200" width="100" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Le Parrain</span>
+                                    <span>Francis Ford Coppola</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>1972-08-04</span>
+                                    <span>2h55</span>
+                                </div>
+                              </td>
+                              <td>7.50€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>Projector</td>
+                              <td>
+                                <button type="button" >
+                                <span ><a class="nav-link" href="panier"></i>reserver</a></span>
+                            </button>
+                            </td>
+                            
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{# the JS file lives at "public/js/jquery.min.js" #}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+{# the JS file lives at "public/js/popper.js" #}
+<script src="{{ asset('js/popper.js') }}"></script>
+{# the JS file lives at "public/js/bootstrap.min.js" #}
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{# the JS file lives at "public/js/main.js" #}
+<script src="{{ asset('js/main.js') }}"></script>
+
+
+            <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+{# the CSS file lives at "public/css/style.css" #}
+<link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
 {% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+{# the CSS file lives at "public/css/style2.css" #}
+<link href="{{ asset('css/style2.css') }}" rel="stylesheet"/>
+{# the image lives at "public/images/product-2.png" #}
+{# the image lives at "public/images/1.jpg" #}
+
+
+ 
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <h2 class="heading-section">Liste des salles</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="h5 mb-4 text-center">salles</h3>
+                    <div class="table-wrap">
+                        <table class="table">
+                          <thead class="thead-primary">
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>logo</th>
+                                <th>nom</th>
+                              <th>addresse</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="alert" role="alert">
+                                <td>
+
+                                </td>
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/a.jpg') }}" alt="Photo" height="160" width="118" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>cienema3d</span>
+                                    <span>55 places</span>
+                                </div>
+                              </td>
+                              <td>3 rue de beauregard</td>
+
+                            </tr>
+
+                            <tr class="alert" role="alert">
+                                <td>
+
+                                </td>
+                                <td>
+                                     <div class="img"> <img src="{{ asset('images/b.jpg') }}" alt="Photo" height="160" width="118" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Frères de l'Ombre</span>
+                                    <span>105 places</span>
+                                </div>
+                              </td>
+                              <td>91 boulevard Aristide Briand</td>
+
+                            </tr>
+
+                            <tr class="alert" role="alert">
+                                <td>
+
+                                </td>
+                                <td>
+                                     <div class="img"> <img src="{{ asset('images/c.png') }}" alt="Photo" height="160" width="118" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>  Projector</span>
+                                    <span>45 places</span>
+                                </div>
+                              </td>
+                              <td>68 Chemin Des Bateliers</td>
+
+                            </tr>
+
+                            <tr class="alert" role="alert">
+                                <td>
+
+                                </td>
+                                <td>
+                                     <div class="img"> <img src="{{ asset('images/d.jpg') }}" alt="Photo" height="160" width="118" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>  Au Septième </span>
+                                    <span>150 places</span>
+                                </div>
+                              </td>
+                              <td>38 boulevard Amiral Courbet</td>
+
+                            </tr>
+
+                            <tr class="alert" role="alert">
+                                <td class="border-bottom-0">
+
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="img"> <img src="{{ asset('images/e.jpg') }}" alt="Photo" height="160" width="118" /></div>
+                                </td>
+                              <td class="border-bottom-0">
+                                <div class="email">
+                                    <span>  Le Coin d'Hollywood </span>
+                                    <span>135 places</span>
+                                </div>
+                              </td>
+                              <td class="border-bottom-0">72 rue du Paillle en queue</td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{# the JS file lives at "public/js/jquery.min.js" #}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+{# the JS file lives at "public/js/popper.js" #}
+<script src="{{ asset('js/popper.js') }}"></script>
+{# the JS file lives at "public/js/bootstrap.min.js" #}
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{# the JS file lives at "public/js/main.js" #}
+<script src="{{ asset('js/main.js') }}"></script>
+
+
+            <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+{# the CSS file lives at "public/css/style.css" #}
+<link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+{% endblock %}

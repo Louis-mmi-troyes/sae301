@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+{# the CSS file lives at "public/css/style2.css" #}
+<link href="{{ asset('css/style2.css') }}" rel="stylesheet"/>
+{# the image lives at "public/images/product-2.png" #}
+{# the image lives at "public/images/1.jpg" #}
+
+ 
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <h2 class="heading-section">Panier</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                   
+                    <div class="table-wrap">
+                        <table class="table">
+                          <thead class="thead-primary">
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>Product</th>
+                              <th>Price</th>
+                              <th>Quantity</th>
+                              <th>total</th>
+                              <th>&nbsp;</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="alert" role="alert">
+
+                                <td>
+                                    <div class="img"> <img src="{{ asset('images/1.jpg') }}" alt="Photo" height="200px" width="100px" /></div>
+                                </td>
+                              <td>
+                                <div class="email">
+                                    <span>Batman - Le Défi</span>
+                                    <span>Tim Burton</span>
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span></span>
+                                
+                                </div>
+                              </td>
+                                                            <td>
+                                <div class="email">
+                                    <span>2022-12-06</span>
+                                    <span>2h06</span>
+                                </div>
+                              </td>
+                              <td>7.50€</td>
+                              <td class="quantity">
+                                <div class="input-group">
+                                <input type="text" name="quantity" class="quantity form-control input-number" value="2" min="1" max="100">
+                            </div>
+                          </td>
+                          <td>15€</td>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="fa fa-close"></i></span>
+                            </button>
+                            </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{# the JS file lives at "public/js/jquery.min.js" #}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+{# the JS file lives at "public/js/popper.js" #}
+<script src="{{ asset('js/popper.js') }}"></script>
+{# the JS file lives at "public/js/bootstrap.min.js" #}
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{# the JS file lives at "public/js/main.js" #}
+<script src="{{ asset('js/main.js') }}"></script>
+
+
+            <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+{# the CSS file lives at "public/css/style.css" #}
+<link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+{% endblock %}

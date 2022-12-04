@@ -2,75 +2,43 @@
 
 {% block body %}
 
-{# the JS file lives at "public/bundles/acme/js/loader.js" #}
-<script src="{{ asset('bundles/acme/js/loader.js') }}"></script>
+{# the image lives at "public/images/t.jpg" #}
+<style type="text/css">
+    body{
+                   background: url("{{ asset('images/t.jpg') }}");
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
+    }
+    img{margin-left: 250px;
+    margin-bottom: 100px ;}
+</style>
 
-
-{# the image lives at "public/images/1.jpg" #}
+{# the image lives at "public/images/2.jpg" #}
+{# the image lives at "public/images/3.jpg" #}
+{# the image lives at "public/images/4.jpg" #}
 {# the CSS file lives at "public/css/style.css" #}
 <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
 
-<img src="{{ asset('images/1.jpg') }}" alt="Symfony!"/>
+
 
             <div id="banniere_image"></div>
-    <center><h1>Liste de jeux vidéo Mario</h1></center>
+    <center><h1>Cultura</h1></center>
 
     <section id="bd">
 
 
 
 
-    batman
-    <center><h3>batman for ever</h3></center>;
-    <center><img src="{{ asset('images/1.jpg') }}" alt="Photo" height="160" width="118" /></center>;
-    <center><p>sorti le 25 au japon </p></center>;
-    <p class="page">Support : test  </p>;
-    <p class="page">film Dans la serie des batman </p>;
-    <p height="16" width="11">Commentaire : description </p>;
-    <img src="{{ asset('images/1.jpg') }}" alt="Photo" height="80" width="59" /><p>sorti sur cinema3d qui est une console fake  </p>;
+    
+    <center><img src="{{ asset('images/2.jpg') }}" alt="Photo"  height="600px" width="300px" "/></center>          <center><img src="{{ asset('images/3.jpg') }}" alt="Photo" height="600px" width="300px" /></center>    <center><img src="{{ asset('images/4.jpg') }}" alt="Photo" height="600px" width="300px" /></center>
+
     </div>;
 
 
 
 </section>
 
-<section id="bd">
-
-
-
-
-    batman
-    <center><h3>batman for ever</h3></center>;
-    <center><img src="{{ asset('images/1.jpg') }}" alt="Photo" height="160" width="118" /></center>;
-    <center><p>sorti le 25 au japon </p></center>;
-    <p class="page">Support : test  </p>;
-    <p class="page">film Dans la serie des batman </p>;
-    <p height="16" width="11">Commentaire : description </p>;
-    <img src="{{ asset('images/1.jpg') }}" alt="Photo" height="80" width="59" /><p>sorti sur cinema3d qui est une console fake  </p>;
-    </div>;
-
-
-
-</section>
-
-<section id="bd">
-
-
-
-
-    batman
-    <center><h3>batman for ever</h3></center>;
-    <center><img src="{{ asset('images/1.jpg') }}" alt="Photo" height="160" width="118" /></center>;
-    <center><p>sorti le 25 au japon </p></center>;
-    <p class="page">Support : test  </p>;
-    <p class="page">film Dans la serie des batman </p>;
-    <p height="16" width="11">Commentaire : description </p>;
-    <img src="{{ asset('images/1.jpg') }}" alt="Photo" height="80" width="59" /><p>sorti sur cinema3d qui est une console fake  </p>;
-    </div>;
-
-
-
-</section>
 
 
 {% endblock %}
