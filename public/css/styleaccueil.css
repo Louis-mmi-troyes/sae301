@@ -1,6 +1,10 @@
 body {
     margin: 0;
        display: flex;
+           background: url("t.jpg");;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
 
 
 }

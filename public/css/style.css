@@ -1,6 +1,10 @@
 
 body {
     margin: 50px;
+    background: url("t.jpg");;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
 }
 iframe {
   display: block;
