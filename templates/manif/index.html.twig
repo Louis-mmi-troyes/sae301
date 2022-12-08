@@ -3,45 +3,183 @@
 {% block title %}Hello ManifController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! </h1>
-    {# templates/article/recent_list.html.twig #}
-{# the contents of this variable are sent to the Web Debug Toolbar
-   instead of dumping them inside the page contents #}
-{% dump manif %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
 
-{% for manif in manif %}
-    {# the contents of this variable are dumped inside the page contents
-       and they are visible on the web page #}
-    {{ dump(manif) }}
-
-    <a href="/manif/{{ manif.slug }}">
-        {{ manif.title }}
-    </a>
-{% endfor %}
-            {% for manif in manif %}
-            <tr>
-                <td>{{ manif.genre }}</td>
-                <td>{{ manif.titre }}</td>
-                <td>{{ manif.descript }}</td>
-                <td>{{ manif.casting }}</td>
-                <td>{{ manif.prix }}</td>
-                <td>{{ manif.date }}</td>
-                <td>{{ manif.horaire }}</td>
-                <td><a href="../manifestation" id="reserver">Réserver</a></td>
-{% endfor %}
+    <!-- Font Icon -->
 
 
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/test/src/Controller/ManifController.php'|file_link(0) }}">src/Controller/ManifController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/test/templates/manif/index.html.twig'|file_link(0) }}">templates/manif/index.html.twig</a></code></li>
-    </ul>
-</div>
+{# the CSS file lives at "public/vendor/vendor/nouislider/nouislider.min.css" #}
+<link href="{{ asset('vendor/vendor/nouislider/nouislider.min.css') }}" rel="stylesheet"/>
+{# the CSS file lives at "public/fonts/material-icon/css/material-design-iconic-font.min.css" #}
+<link href="{{ asset('fonts/material-icon/css/material-design-iconic-font.min.css') }}" rel="stylesheet"/>
+{# the CSS file lives at "public/css/style4.css" #}
+<link href="{{ asset('css/style4.css') }}" rel="stylesheet"/>
+
+    <!-- Main css -->
+ 
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" action="#">
+                <div>
+                    <h3>Personal info</h3>
+                    <fieldset>
+                        <h2>Personal information</h2>
+                        <p class="desc">Please enter vos infomation </p>
+                        <div class="fieldset-content">
+                            <div class="form-row">
+                                <label class="form-label">Name</label>
+                                <div class="form-flex">
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" id="first_name" />
+                                        <span class="text-input">First</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" id="last_name" />
+                                        <span class="text-input">Last</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" id="email" />
+                                <span class="text-input">Example  :<span>  Jeff@gmail.com</span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" name="phone" id="phone" />
+                            </div>
+                            <div class="form-date">
+                                <label for="birth_date" class="form-label">Birth Date</label>
+                                <div class="form-date-group">
+                                    <div class="form-date-item">
+                                        <select id="birth_month" name="birth_month"></select>
+                                        <span class="text-input">MM</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_date" name="birth_date"></select>
+                                        <span class="text-input">DD</span>
+                                    </div>
+                                    <div class="form-date-item">
+                                        <select id="birth_year" name="birth_year"></select>
+                                        <span class="text-input">YYYY</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <h3>Connect Bank Account</h3>
+                    <fieldset>
+                        <h2>Connect Bank Account</h2>
+                        <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p>
+                        <div class="fieldset-content">
+                            <div class="form-group">
+                                <label for="find_bank" class="form-label">Find Your Bank</label>
+                                <div class="form-find">
+                                    <input type="text" name="find_bank" id="find_bank" placeholder="Ex. Techcombank" />
+                                    <input type="submit" value="Search" class="submit">
+                                    <span class="form-icon"><i class="zmdi zmdi-search"></i></span>
+                                </div>
+                            </div>
+                            <div class="choose-bank">
+                                <p class="choose-bank-desc">Or choose from these popular bank</p>
+                                <div class="form-radio-flex">
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_1" value="bank_1" checked="checked" />
+                                        {# the image lives at "public/images/bank-1.jpg" #}
+                                        {# the image lives at "public/images/bank-2.jpg" #}
+                                        {# the image lives at "public/images/bank-3.jpg" #}
+                                        {# the image lives at "public/images/bank-4.jpg" #}
+                                        {# the image lives at "public/images/bank-5.jpg" #}
+                                        {# the image lives at "public/images/bank-6.jpg" #}
+                                        {# the image lives at "public/images/bank-7.jpg" #}
+                                        {# the image lives at "public/images/bank-8.jpg" #}
+                                        <label for="bank_1"><img src="images/bank-1.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_2" value="bank_2" />
+                                        <label for="bank_2"><img src="images/bank-2.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_3" value="bank_3" />
+                                        <label for="bank_3"><img src="images/bank-3.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_4" value="bank_4" />
+                                        <label for="bank_4"><img src="images/bank-4.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_5" value="bank_5" />
+                                        <label for="bank_5"><img src="images/bank-5.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_6" value="bank_6" />
+                                        <label for="bank_6"><img src="images/bank-6.jpg" alt=""></label>
+                                    </div>
+                                    
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_7" value="bank_7" />
+                                        <label for="bank_7"><img src="images/bank-7.jpg" alt=""></label>
+                                    </div>
+
+                                    <div class="form-radio-item">
+                                        <input type="radio" name="choose_bank" id="bank_8" value="bank_8" />
+                                        <label for="bank_8"><img src="images/bank-8.jpg" alt=""></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    {# the JS file lives at "public/vendor/vendor/jquery/jquery.min.js" #}
+<script src="{{ asset('vendor/vendor/jquery/jquery.min.js') }}"></script>
+{# the JS file lives at "public/vendor/vendor/jquery-validation/dist/jquery.validate.min.js" #}
+<script src="{{ asset('vendor/vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+
+{# the JS file lives at "public/vendor/vendor/jquery-validation/dist/additional-methods.min.js" #}
+<script src="{{ asset('vendor/vendor/jquery-validation/dist/additional-methods.min.js') }}"></script>
+
+{# the JS file lives at "public/vendor/vendor/jquery-steps/jquery.steps.min.js" #}
+<script src="{{ asset('vendor/vendor/jquery-steps/jquery.steps.min.js') }}"></script>
+{# the JS file lives at "public/vendor/vendor/minimalist-picker/dobpicker.js" #}
+<script src="{{ asset('vendor/vendor/minimalist-picker/dobpicker.js') }}"></script>
+
+{# the JS file lives at "public/vendor/vendor/nouislider/nouislider.min.js" #}
+<script src="{{ asset('vendor/vendor/nouislider/nouislider.min.js') }}"></script>
+{# the JS file lives at "public/vendor/vendor/wnumb/wNumb.js" #}
+<script src="{{ asset('vendor/vendor/wnumb/wNumb.js') }}"></script>
+{# the JS file lives at "public/js/main5.jss" #}
+<script src="{{ asset('js/main5.js') }}"></script>
+
+
+</body>
+
+</html>
 {% endblock %}

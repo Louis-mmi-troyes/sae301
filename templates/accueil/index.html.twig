@@ -19,26 +19,92 @@
 {# the image lives at "public/images/4.jpg" #}
 {# the CSS file lives at "public/css/style.css" #}
 <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+{# the CSS file lives at "public/css/style3.css" #}
+<link href="{{ asset('css/style3.css') }}" rel="stylesheet"/>
+{# the CSS file lives at "public/css/owl.carousel.min.css" #}
+<link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet"/>
+{# the CSS file lives at "public/css/owl.theme.default.min.css" #}
+<link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet"/>
 
 
 
-            <div id="banniere_image"></div>
-    <center><h1>Cultura</h1></center>
+        
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="heading-section mb-5">Multicinéma Projector</h2>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="featured-carousel owl-carousel">
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{ asset('images/2.jpg') }});">
+                                        <div class="text w-100">
+                                            <span class="cat">Web Design</span>
+                                            <h3><a href="#">Working Spaces for Startups Freelancer</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{ asset('images/3.jpg') }});">
+                                        <div class="text w-100">
+                                            
+                                            <h3><a href="manifs">Frères de l'Ombrer</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{ asset('images/4.jpg') }});">
+                                        <div class="text w-100">
+                                            
+                                            <h3><a href="manifs">Harry Potter</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{ asset('images/5.jpg') }});">
+                                        <div class="text w-100">
+                                            
+                                            <h3><a href="manifs">Ça</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-end justify-content-center" style="background-image: url({{ asset('images/6.jpg') }});">
+                                        <div class="text w-100">
+                                            
+                                            <h3><a href="manifs">Legend</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{# the JS file lives at "public/js/jquery2.min.js" #}
+<script src="{{ asset('js/jquery2.min.js') }}"></script>
+{# the JS file lives at "public/js/popper2.js" #}
+<script src="{{ asset('js/popper2.js') }}"></script>
+{# the JS file lives at "public/js/bootstrap2.min.js" #}
+<script src="{{ asset('js/bootstrap2.min.js') }}"></script>
+{# the JS file lives at "public/js/owl.carousel.min.js" #}
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+{# the JS file lives at "public/js/main2.js" #}
+<script src="{{ asset('js/main2.js') }}"></script>
 
-    <section id="bd">
-
-
-
-
-    
-    <center><img src="{{ asset('images/2.jpg') }}" alt="Photo"  height="600px" width="300px" "/></center>          <center><img src="{{ asset('images/3.jpg') }}" alt="Photo" height="600px" width="300px" /></center>    <center><img src="{{ asset('images/4.jpg') }}" alt="Photo" height="600px" width="300px" /></center>
-
-    </div>;
-
-
-
-</section>
-
+  </body>
+</html>
 
 
 {% endblock %}
